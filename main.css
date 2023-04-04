@@ -24,6 +24,7 @@
 .row {
   display: flex;
 }
+
 button {
   height: 80px;
   background-color: gray;
@@ -34,7 +35,21 @@ button {
   outline: none;
 }
 
+button:hover {
+  background-color: darkgray;
+}
+
+.operator:hover,
+.equal-sign:hover {
+  background-color: darkorange;
+}
+
 .all-clear,
 .zero-btn {
   width: 50%;
+}
+
+.operator,
+.equal-sign {
+  background-color: orange;
 }
