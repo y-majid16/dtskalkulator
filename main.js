@@ -63,12 +63,25 @@ const calculate = () => {
     case "/":
       result = prevNumber / currentNumber;
       break;
-
     default:
       return;
   }
   currentNumber = result;
   calculationOperator = "";
+};
+
+const percent = document.querySelector(".percentage");
+
+percent.addEventListener("click", () => {
+  inputpercentages(event.target.value);
+  updateScreen(currentNumber);
+});
+
+inputpercentages = (percent) => {
+  if (currentNumber.includes("%")) {
+    return;
+  }
+  currentNumber = currentNumber / 100;
 };
 
 const clearBtn = document.querySelector(".all-clear");
